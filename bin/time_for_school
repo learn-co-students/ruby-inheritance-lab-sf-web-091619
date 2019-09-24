@@ -12,9 +12,22 @@ avi = Teacher.new
 avi.first_name = "Avi"
 avi.last_name = "Flombaum"
 
+jim = User.new
+jim.first_name = "Jimmy"
+jim.last_name = "Begood"
+
+adam = Student.new
+adam.first_name = "Adam"
+adam.last_name = "La Rosa"
+
 
 some_knowledge = avi.teach 
-
 steve.learn(some_knowledge)
 
+# jim.learn(some_knowledge) - no good, class User has no method "learn"
+
+more_knowledge = avi.teach
+adam.learn(more_knowledge)
+
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+puts "Adam also learned more important knowledge: '#{adam.knowledge.first}' from Avi"
